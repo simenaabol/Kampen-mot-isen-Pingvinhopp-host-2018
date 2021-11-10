@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+body {
+  background: url(../grafikk_web/spillbakgrunn.png);
+  background-color: #a69a92;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+  /* Div med hele innholdet på siden */
+  #spillbakgrunn {
+    padding: 6em;
+    max-width: 100%;
+  }
+
+    /* Kanvaset med spillet i */
+    #spillKanvas {
+      display: block; /* Starter en ny linje, og tar opp hele bredden i den nye linjen.*/
+      margin: auto;
+      max-width: 100%;
+    }
+
+
+    /* Når nettleservinduet blir lite, fjernes en del padding og margin rundt kanvaset, for at det skal bli mer synlig */
+    @media screen and (max-width: 800px) {
+      #spillbakgrunn {
+        padding: 1em;
+        padding-top: 4em;
+      }
+      .spill {
+        margin-left: -1em;
+        margin-right: -1em;
+      }
+    }
+
+
+
+
+  /* Popupboks med spillregler */
+  .modal-body {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
+
+    .modalParagraf {
+      padding: 1em;
+    }
+      .uthevet {
+        font-weight: bold;
+      }
+
+    .regelBilde {
+      border-radius: 12px;
+      max-width: 50%;
+      padding: 0.5em;
+    }
+
+    .modal-body span {
+      font-weight: bold;
+    }
+
+
+    /* Knapp som viser/skjuler reglene for 1 eller 2 spillere */
+    .regler {
+      width: 50%;
+      float: left;
+    }
+      .spillregel {
+        background-color: #78afc7;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: 1px solid #d5edf7;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+        font-weight: bold;
+        transition: 0.4s;
+      }
+        .spillregel:hover {
+          background-color: #9dc8db;
+        }
+
+
+
+    /* Regler for 1 spiller */
+    #regel1 {
+      width: 100%;
+      float: left;
+    }
+      .arrows {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em;
+      }
+
+
+    /* Regler for 2 spillere */
+    #regel2 {
+      width: 100%;
+      padding: 1em;
+    }
+      .toSpillere {
+        padding: 1em;
+      }
+
+        #h5rød {
+          padding-top: 2em;
+          color: red;
+          font-weight: bold;
+        }
+
+        #h5blå {
+          color: blue;
+          font-weight: bold;
+        }

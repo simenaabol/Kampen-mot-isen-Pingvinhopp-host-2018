@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href=
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src=
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <script src="index.js"></script>
+  <title>Kampen mot isen</title>
+  <link rel="icon" href="spill/grafikk/ikon.png">
+</head>
+
+<!-- Navigasjonslinker blir aktive ved scrolling på siden -->
+<body data-spy="scroll" data-target="#navigasjon">
+
+
+
+
+
+  <!-- Navigasjonsbar -->
+  <div id="navigasjon">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <!-- Logo og logotext til venstre i navbaren -->
+        <div class="navbar-left logo">
+          <img src="grafikk_web/logo_blue.png" id="logo" alt="Logo av en blå pingvin">
+        </div>
+        <a class="brand brand-name navbar-left nav-link active" href="#header" accesskey="1">
+          <div id="logoText" class="navbar-left">
+            KampenMotIsen
+          </div>
+        </a>
+
+        <!-- Meny-ikon som viser/skjuler navigasjonslinker når skjermen blir liten -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navlinker til høyre i navbaren -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-tabs" role="tablist" id="container">
+
+            <li class="nav-item">
+              <a class="nav-link" href="spill/index.html" accesskey="S">
+                SPILL
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#utviklere" accesskey="2">
+                UTVIKLERE
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kontaktFirstDiv" accesskey="3">
+                KONTAKT OSS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#medvirkende" accesskey="4">
+                MEDVIRKENDE
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="hjelp.html" accesskey="0">
+                HJELP & STØTTE
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <!-- Forsiden/headeren -->
+  <div id="header" class="container-fluid">
+    <div id="overskrift">
+      <h1>KAMPEN<br>MOT ISEN</h1>
+
+      <a id="spill" href="spill/index.html" accesskey="S">
+        SPILL
+      </a>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Delen om utviklerene -->
+  <div id="utviklere" class="container-fluid">
+
+    <div class="container">
+
+      <!-- Delt opp i to kolonner -->
+      <div class="row">
+
+        <!-- Smalere venstre kolonne -->
+        <div class="column-33">
+          <div class="underoverskrift">
+            <h2>Utviklerne</h2>
+          </div><br>
+          <p class="forklaring">Hvem er vi?</p>
+
+          <div class="paragraf">
+            <p>Vi er fem studenter som går Informatikk, drift av datasystemer på NTNU i Trondheim.</p>
+            <p>Vi har de siste 3 månedene hatt et prosjekt der vi skal lage et spill og en webside sammen, og dette er resultatet!</p>
+            <p>Bruk navigasjonsbaren øverst på siden til å navigere rundt.</p>
+          </div>
+
+        </div>
+
+
+        <!-- Bredere høyre kolonne -->
+        <div class="column-66">
+
+          <!-- Alle utviklerene -->
+          <div id="utviklerRad" >
+
+            <!-- Bilde og tekst om Jon -->
+            <div class="bildeColumn">
+              <div class="bilde">
+                <img src="grafikk_web/jon2.jpg" alt='Bilde av utvikleren Jon'>
+                <div class="container">
+                  <h4>Jon (20)</h4>
+                  <p class="title">jonalan@stud.ntnu.no</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bilde og tekst om Peder -->
+            <div class="bildeColumn">
+              <div class="bilde">
+                <img src="grafikk_web/peder2.jpg" alt='Bilde av utvikleren Peder'>
+                <div class="container">
+                  <h4>Peder (20)</h4>
+                  <p class="title">pedermn@stud.ntnu.no</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bilde og tekst om Ingvild -->
+            <div class="bildeColumn">
+              <div class="bilde">
+                <img src="grafikk_web/Ingvild2.jpg" alt='Bilde av utvikleren Ingvild'>
+                <div class="container">
+                  <h4>Ingvild (24)</h4>
+                  <p class="title">ingvande@stud.ntnu.no</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bilde og tekst om Silje -->
+            <div class="bildeColumn">
+              <div class="bilde">
+                <img src="grafikk_web/silje2.jpg" alt='Bilde av utvikleren Silje'>
+                <div class="container">
+                  <h4>Silje (27)</h4>
+                  <p class="title">siljta@stud.ntnu.no</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bilde og tekst om Simen -->
+            <div class="bildeColumn">
+              <div class="bilde">
+                <img src="grafikk_web/simen2.jpg" alt='Bilde av utvikleren Simen'>
+                <div class="container">
+                  <h4>Simen (19)</h4>
+                  <p class="title">simentaa@stud.ntnu.no</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Kontaktdelen-->
+  <div id='kontaktFirstDiv' class="container-fluid">
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Bredere venstre kolonne -->
+        <div class="column-66">
+          <div class="underoverskrift">
+            <h2 id='kontakth2'>Kontakt oss</h2>
+          </div><br>
+
+          <div>
+            <h5>Kart over vår lokasjon:</h5>
+
+            <!-- Kart som vises kun når nettleservinduet er større enn 800px. Ellers er det skjult -->
+            <div id="stortKart">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d892.3520999727918!2d10.38839617658233!3d63.42847499583808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcda908aebfe698c1!2sNTNU+Akrinn!5e0!3m2!1sno!2sus!4v1539890393831" width="500"
+                height="400" allow="fullscreen" class="kart"></iframe>
+            </div>
+
+            <!-- Kart som vises når nettleservinduet er mindre enn 800px, og som kan skjules/vises ved trykk på en knapp -->
+            <div id="liteKart">
+              <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#toggleKart" id="buttonToggleKart">
+                VIS KART
+              </button>
+
+              <div id="toggleKart" class="collapse">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d892.3520999727918!2d10.38839617658233!3d63.42847499583808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcda908aebfe698c1!2sNTNU+Akrinn!5e0!3m2!1sno!2sus!4v1539890393831" width="500"
+                height="400" allow="fullscreen" class="kart"></iframe>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Smalere høyre kolonne -->
+        <div class="column-33">
+
+          <!--Innhold i skjema-->
+          <div class="skjema">
+            <form onsubmit="return validerSkjema()" action="mailto:kontakt.team21@gmail.com" method="post" enctype="text/plain" id="formKropp">
+            <br>
+
+              <!-- Skrive inn navn -->
+              <label for="navn">
+                <i class="fa fa-user icon"></i>
+                Navn:
+              </label>
+              <br>
+              <input type="text" name="navn" placeholder="Skriv her" id="fnavninput">
+              <br>
+
+              <!-- Skrive inn epost -->
+              <label for="e-post">
+                <i class="fa fa-envelope icon"></i>
+                Epost:
+              </label>
+              <br>
+              <input type="email" id="epostfelt" name="e-post" placeholder="Skriv her">
+              <br>
+
+              <!-- Knapp som sender brukeren til epost-programmet -->
+              <input type="submit" value="SEND" id="send" class="ksknapp">
+
+              <input type="reset" value="RESET" id='reset' class="ksknapp">
+
+            </form>
+          </div>
+
+
+          <!--Meningsmåling-->
+          <div id="dinMening">
+            <h5>Gjerne gi oss din mening!</h5>
+
+            <!-- Knapp som viser/skjuler meningsmålingen -->
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#meningsmåling" id="buttonToggleMening">
+              STEM HER
+            </button>
+
+            <!-- Vist/skjult meningsmåling -->
+            <div id="meningsmåling" class="collapse">
+              <div id="poll">
+
+                <form method="post" action="https://poll.pollcode.com/23157358">
+
+                  <p class="forklaring">
+                    Hva synes du om Kampen mot Isen?
+                  </p>
+
+                  <div id="divPollSvar">
+                    <select name="answer" id='pollSvarSelect'>
+                      <option value="1">Sykt fett!</option>
+                      <option value="2">Bra spill.</option>
+                      <option value="3">Helt greit.</option>
+                      <option value="4">Har ikke prøvd det.</option>
+                      <option value="5">Bah..</option>
+                      <option value="6">Ikke min stil.</option>
+                      <option value="7">Hater det! </option>
+                    </select>
+                  </div>
+
+                  <div id="divKnappPoll">
+                    <input type="submit" value="STEM" id="stem" class="ksknapp"> 
+                    <input type="submit" name="view" value="SE SVAR" id="se" class="ksknapp">
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Delen om medvirkende -->
+  <div id="medvirkende" class="container-fluid">
+    <div class="container">
+      <div class="row">
+
+        <!-- Smalere venstre kolonne -->
+        <div class="column-33">
+          <div class="underoverskrift">
+            <h2>Medvirkende</h2>
+          </div><br>
+
+          <div class="paragraf">
+            <p>På nettet er det et stort utvalg av grafiske elementer til spill, som er gratis å bruke. Dette har vi benyttet oss av i vårt prosjekt.</p>
+            <p>Alt av elementer vi har brukt er fritt lisensiert, og kan i utgangspunktet brukes også uten å kreditere utgiverne.</p>
+          </div><br>
+
+          <p class="forklaring">Pingvinen</p>
+          <div class="paragraf">
+            <p>Pingvinen, som kan ses både på forsiden av websiden og i spillet, er tegnet av Hege Tilset spesifikt for dette prosjektet. Den er derfor ikke tilgjengelig andre steder, og er kopibeskyttet av tegneren.</p>
+          </div><br>
+
+          <p class="forklaring">Fonten til logoen</p>
+          <div class="paragraf">
+            <p>Fonten vi har brukt på logoen, i navigasjonsbaren, på forsiden og i footeren, er laget av Haslinda Adnan. Den er hentet fra <a href="https://www.dafont.com/profile.php?user=961713" target="_blank">dafont.com</a>, som er en samleside med mange ulike fonter.</p>
+          </div>
+
+        </div>
+
+        <!-- Bredere venstre kolonne -->
+        <div class="column-66">
+
+          <div class="medvirkere">
+            <img src="grafikk_web/kenney-promo.png" alt="Logo for Kenney.nl">
+            <p class="navn">Kenney Vleugels</p>
+            <div class="paragraf">
+              <p>Plattformer, bakgrunner, og andre elementer i spillet er hentet fra nettsiden <a href="https://kenney.nl" target="_blank"> Kenney.nl</a>. Bakgrunnen på forsiden på websiden er også sammensatt av elemmenter fra Kenney.nl.</p>
+            </div>
+          </div>
+
+          <div class="medvirkere">
+            <img src="grafikk_web/freesound_logo.PNG" alt="Logo freeSound.org">
+            <p class="navn">Freesound.org</p>
+            <div class="paragraf">
+              <p>Freesound er en sammarbeidsdatabase med Creative Commons lisensierte lyder og musikk. Musikken og lydeffektene vi har brukt i spillet, er hentet herfra.</p>
+            </div>
+          </div>
+
+          <div class="medvirkere">
+            <p class="navn">Logoen</p>
+            <div class="paragraf">
+              <p>Pingvin-logoen vår er inspirert av en logo hentet fra <a href="https://all-free-download.com/" target="_blank">AllFreeDownload.com</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Innhold til venstre på footeren -->
+      <div class="footer-left">
+        <h3>TEAM<span>21</span></h3>
+        <p class="footer-links">
+          <a href="#header" id="paddingLink1">
+            Toppen av siden</a>
+          <a href="hjelp.html" id="borderLinker">
+            Hjelp & støtte</a>
+          <a href="#kontaktFirstDiv" id="paddingLink2">
+            Kontakt oss</a>
+        </p>
+
+        <p class="footer-copyright">
+          Copyright &copy; 2018</p>
+      </div>
+
+      <!-- Innhold på midten av footeren -->
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Sverres gate 13</span>NTNU Trondheim</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:kontakt.team21@gmail.com">
+              kontakt.team21@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Innhold til høyre på footeren -->
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Om oss</span>
+          Vi i Team21 er fem studenter som går Informatikk, drift av datasystemer på NTNU i Trondheim. Dette er vårt første prosjekt.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+  <script type="text/javascript" src="jquery.js"></script>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang=no dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../index.css">
+  <title>Pingvinhopp</title>
+  <link rel="stylesheet" href="stil.css">
+  <link rel="icon" href="grafikk/ikon.png">
+</head>
+
+<body>
+
+
+
+
+
+  <!-- Navigasjonsbar -->
+  <div id="navigasjonLiten">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <!-- Logo og logotext til venstre i navbaren -->
+        <div class="navbar-left logo">
+          <img src="../grafikk_web/logo_blue.png" id="logo" alt='Logo av en blå pingvin'>
+        </div>
+        <a class="brand brand-name navbar-left" href="../index.html" accesskey="1">
+          <div id="logoTextSpill" class="navbar-left">
+            KampenMotIsen</div>
+        </a>
+
+        <!-- Meny-ikon som viser/skjuler navigasjonslinker når skjermen blir liten -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navlinker til høyre i navbaren -->
+        <div class="collapse navbar-collapse justufy-content-end" id="navbarToggler">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-tabs" id="container" role="tablist">
+
+            <li class="nav-item active">
+              <a class="nav-link active" href="index.html" accesskey="S">
+                SPILL
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#utviklere" accesskey="2">
+                UTVIKLERE
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#kontaktFirstDiv" accesskey="3">
+                KONTAKT OSS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#medvirkende" accesskey="4">
+                MEDVIRKENDE
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../hjelp.html" accesskey="0">
+                HJELP & STØTTE
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <!-- Kanvas med spillet i -->
+  <div class="container-fluid" id="spillbakgrunn">
+    <div class="container">
+      <div class="spill">
+        <canvas id="spillKanvas" width="480" height="600"></canvas>
+        <script type="text/javascript" src="spill.js"></script>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Popupboks for spillregler, som åpnes via link i menyen til spillet -->
+  <div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTittel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTittel">
+            Hvordan spille
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Felles regler -->
+        <div class="modal-body" id="accordion">
+          <div class="modalParagraf">
+            <p>Pingvinen(e) hopper automatisk. Målet er å komme seg så høyt som mulig.</p>
+            <p>Pass opp for livsfarlige tapper! Ødelegg dem ved å skyte dem!</p>
+          </div>
+
+          <img src="../grafikk_web/tapper2.png" alt="Skjermbilde av tapper" class="regelBilde">
+          <img src="../grafikk_web/skyter.png" alt="Skjermbilde av skyting" class="regelBilde">
+
+          <p id="unntak">Plukk opp fisk på veien for mer ammo. Pass på at du har nok øverst i høyre hjørne!</p>
+
+          <div class="modalParagraf">
+            <p>Vær oppmerksom på skrøplige plattformer. Hopp ekstra høyt med de større plattformene.</p>
+          </div>
+
+          <img src="../grafikk_web/platform1kopi.png" alt="Skjermbilde av skrøpelig plattform" class="regelBilde">
+          <img src="../grafikk_web/platform2.png" alt="Skjermbilde av svær plattform" class="regelBilde">
+
+          <div class="modalParagraf">
+            <p>Faller du ned fra en plattform er spillet over.</p>
+            <p class="uthevet">Lykke til!</p>
+          </div>
+
+          <p><span>Tips:</span> Man kan bruke tast <span>L</span> og <span>M</span> for å skru av lyden og musikken</p>
+
+          <!-- Knapp som viser reglene for 1 spiller -->
+          <div class="regler">
+            <button type="button" class="spillregel" data-toggle="collapse" data-target="#regel1" data-parent="#accordion">
+              Kontroller èn spiller
+            </button>
+          </div>
+
+          <!-- Knapp som viser reglene for 2 spillere -->
+          <div class="regler">
+            <button type="button" class="spillregel" data-toggle="collapse" data-target="#regel2" data-parent="#accordion">
+              Kontrollere to spillere
+            </button>
+          </div>
+
+          <!-- Regler for 1 spiller -->
+          <div id="regel1" class="collapse">
+            <div class="modalParagraf">
+              <p>For å styre pingvinen bruker du <span>HØYRE</span> og <span>VENSTRE</span> piltast.</p>
+            </div>
+            <!-- <img src="../grafikk_web/arrows.gif" alt="Piltaster" class="arrows"> -->
+            <div class="modalParagraf">
+              <p>Bruk <span>OPP PILTAST </span> for å skyte ned tapper.</p>
+            </div>
+          </div>
+
+          <!-- Regler for 2 spillere -->
+          <div id="regel2" class="collapse">
+            <div class="toSpillere">
+              <h5 id="h5rød">Rød pingvin:</h5>
+              <div class="modalParagraf">
+                <p>For å styre pingvinen bruker du <span>A</span> for å gå til venstre, og <span>D</span> for å gå til høyre.</p>
+                <p>Bruk <span>W</span> for å skyte ned tapper.</p>
+              </div>
+            </div>
+
+            <div class="toSpillere">
+              <h5 id="h5blå">Blå pingvin: </h5>
+              <p>For å styre pingvinen bruker du <span>HØYRE</span> og <span>VENSTRE</span> piltast.</p>
+              <!-- <img src="../grafikk_web/arrows.gif" alt="Piltaster" class="arrows"> -->
+              <p>Bruk <span>OPP PILTAST</span> for å skyte ned tapper.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Lukk
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Innhold til venstre på footeren -->
+      <div class="footer-left">
+        <h3>TEAM<span>21</span></h3>
+        <p class="footer-links">
+          <a href="#spillbakgrunn" id="paddingLink1">
+            Toppen av siden</a>
+          <a href="../hjelp.html" id="borderLinker">
+            Hjelp & støtte</a>
+          <a href="../index.html#kontaktFirstDiv" id="paddingLink2">
+            Kontakt oss</a>
+        </p>
+
+        <p class="footer-copyright">
+          Copyright &copy; 2018</p>
+      </div>
+
+      <!-- Innhold på midten av footeren -->
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Sverres gate 13</span>NTNU Trondheim</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:kontakt.team21@gmail.com">
+              kontakt.team21@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Innhold til høyre på footeren -->
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Om oss</span>
+          Vi i Team21 er fem studenter som går Informatikk, drift av datasystemer på NTNU Trondheim. Dette er vårt første prosjekt.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+</body>
+
+</html>

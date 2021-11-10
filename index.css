@@ -1,0 +1,730 @@
+@import url("https://fonts.googleapis.com/css?family=Delius|Sigmar+One|Raleway");
+
+/* Font som brukes på logotext (i navbar, på forsiden og i footer) */
+@font-face {
+  font-family: MyFont;
+  src: url(grafikk_web//ALIN_KID.ttf);
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #d5edf7;
+  position: relative;
+  /* Viktig: gjør at footer blir stående på bunn */
+  min-height: 100%;
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+/* NAVIGASJON */
+#navigasjon {
+  overflow: hidden;
+  background: #d5edf7;
+  padding: 1em 1em;
+  transition: 0.4s;
+  /* Myk overgang fra stor til liten navbar */
+  position: fixed;
+  /* Blir stående på toppen uansett hvor på siden man er */
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+/* Logo og logotext på navbaren */
+.logo {
+  display: block;
+}
+
+#logo {
+  height: 70px;
+  width: 100px;
+  margin-bottom: -1em;
+  margin-top: -0.5em;
+  transition: 0.4s;
+}
+
+#logoText {
+  font-family: MyFont, Arial, sans-serif;
+  margin-left: -1em;
+  margin-bottom: -1em;
+  font-size: 1.1em;
+  visibility: hidden;
+  color: #387eb6;
+}
+
+#container {
+  border: 0;
+}
+
+#navigasjon a {
+  float: left;
+  color: #1b666e;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  transition: 0.4s;
+  /* Myk overgang fra store til små linker */
+}
+
+#navigasjon a:hover {
+  font-weight: bold;
+}
+
+/* Aktive linker i navigasjonsbar */
+.nav-tabs .nav-item .nav-link.active {
+  font-weight: bold;
+  background-color: inherit;
+}
+
+/* Mindre navbar på spillsiden og hjelpsiden */
+#navigasjonLiten {
+  overflow: hidden;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 5px 3px -6px black;
+}
+
+/* Egen id på logotext på spill- og hjelpsiden, da den alltid skal være synlig */
+#logoTextSpill {
+  font-family: MyFont, Arial, sans-serif;
+  margin-left: -1em;
+  margin-bottom: -1em;
+  font-size: 1.1em;
+  color: #387eb6;
+}
+
+#navigasjonLiten a {
+  float: left;
+  color: #1b666e;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+#navigasjonLiten a:hover {
+  font-weight: bold;
+}
+
+/* Når skjermen blir liten skal logoen til venstre og menyikonet til høyre */
+@media screen and (max-width: 580px) {
+  #navbarToggler {
+    padding: 20px 10px !important;
+  }
+
+  #logo {
+    height: 50px;
+    width: 75px;
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+/* FORSIDEN */
+#header {
+  background: url(grafikk_web/bg1.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
+  padding-top: 32em;
+  padding-bottom: 15em;
+  z-index: 1;
+}
+
+/* Kampen mot isen-overskrift */
+#overskrift {
+  font-size: 3em;
+  text-align: center;
+  margin-top: -7.5em;
+}
+
+#overskrift h1 {
+  font-family: MyFont, Arial, sans-serif;
+  font-size: 1.3em;
+  color: #1b666e;
+}
+
+/* Link til spillsiden */
+#spill {
+  padding: 2.1em;
+  background: url(grafikk_web/cloud1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #387eb6;
+  transition: 0.2s;
+  font-family: MyFont, Arial, sans-serif;
+  font-size: 0.5em;
+  text-decoration: none;
+  max-width: 100%;
+  height: auto;
+}
+
+#spill:hover {
+  font-size: 0.6em;
+  color: #448c5e;
+}
+
+/* Når skjermen blir liten, skal overskriften bli mindre, og headeren mindre */
+@media screen and (max-width: 580px) {
+  #header {
+    padding-top: 20em !important;
+    padding-bottom: 17em !important;
+  }
+
+  #overskrift h1 {
+    font-size: 1.1em !important;
+    margin-top: 3em !important;
+  }
+}
+
+/* Når skjermen blir liten skal linken til spillet bli mindre */
+@media screen and (max-width: 800px) {
+  #spill {
+    font-size: 0.5em;
+    padding: 1.5em;
+  }
+
+  #spill:hover {
+    font-size: 0.4em;
+    padding: 1.5em;
+  }
+}
+
+/* Innholdet på siden delt opp i rader, og kolonner med ulike størrelse (ZIGZAG-layout) */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 2em;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 2em;
+}
+
+/* Ved små skjermer blir kolonnene plassert under hverandre */
+@media screen and (max-width: 800px) {
+
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Lik underoverskrift på alle delene på siden */
+.underoverskrift {
+  color: #387eb6;
+  font-size: 2.5em;
+  border-bottom: 1px solid lightgrey;
+}
+
+.underoverskrift h2 {
+  font-weight: bold;
+}
+
+.forklaring {
+  font-weight: bold;
+}
+
+/* UTVIKLERE */
+#utviklere {
+  background-color: #f1f1f1;
+  height: 100%;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  z-index: 1;
+}
+
+#utviklerRad::after, .bilde .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.bildeColumn {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 1em;
+  padding: 0 8px;
+  display: block;
+}
+
+.bilde {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.bilde img {
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: grey;
+}
+
+/* Går fra 3 til 2 kolonner med bilder */
+@media screen and (max-width: 1000px) {
+  .bildeColumn {
+    width: 50%;
+    display: block;
+  }
+}
+
+/* Ved små skjermer */
+@media screen and (max-width: 650px) {
+  .container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+  }
+
+  .bildeColumn .container h4 {
+    font-size: 16px;
+    /* Minsker tekststørrelsen for navn (alder) på utviklerne */
+  }
+
+  .title {
+    font-size: 12px;
+    /* Minsker tekststørrelsen for mailadresse */
+  }
+}
+
+/* KONTAKTSIDE */
+#kontaktFirstDiv {
+  background-color: #e3e3e3;
+  min-height: 50em;
+  padding-top: 6em;
+  padding-bottom: 3em;
+}
+
+.kart {
+  margin-top: 1em;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.kart:focus {
+  border: 2px orange;
+}
+
+/* Knapp som viser/skjuler kart og tilhørende kart, skjules når skjermen er stor */
+#buttonToggleKart, #toggleKart {
+  visibility: hidden;
+}
+
+/* Knapper for å vise/skjule kart og meningsmåling */
+#buttonToggleMening,
+#buttonToggleKart {
+  width: 200px;
+  border-bottom: 1px solid black;
+}
+
+/* Når skjermen er stor, vises det et kart som ikke kan skjules. Når skjermen er liten, blir dette kartet erstattet med det under */
+@media screen and (max-width: 800px) {
+  #stortKart {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  #buttonToggleKart, #toggleKart {
+    visibility: visible;
+  }
+}
+
+
+#liteKart {
+  visibility: visible;
+}
+
+@media screen and (min-width: 800px) {
+  #liteKart {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+
+
+/* Skjema for å skrive inn navn og email */
+.skjema input {
+  width: auto;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#formKropp {
+  border-bottom: 1px solid lightgrey;
+  border-width: thin;
+}
+
+.skjema input:hover {
+  border: 2px solid black;
+  background-color: white;
+}
+
+.skjema input:focus {
+  background: white;
+  color: black;
+  border: 2px solid white;
+}
+
+/* Meningsmålingen */
+#dinMening {
+  padding-top: 2em;
+}
+
+#poll {
+  margin-top: 1em;
+  border-top: 1px;
+  padding-top: 1em;
+  border-color: #ca8b4c;
+  border-top-style: ridge;
+  border-width: thin;
+  font-size: 1em;
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  #poll {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*Div som omfavner svaralt. i poll*/
+#divPollSvar {
+  padding-bottom: 0.5em;
+}
+
+/* Listen over valgmuligheter i målingen blir uthevet */
+#pollSvarSelect:focus {
+  border: 2px solid black;
+}
+
+/*Knapper under poll*/
+#divKnappPoll {
+  padding-top: 0.5em;
+}
+
+/* Knappene for skjema og meningsmåling */
+#send, #reset, #stem, #se {
+  background-color: #17a2b7;
+  border: 1px solid #e19046;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid black;
+}
+
+#send:hover, #reset:hover, #stem:hover, #se:hover {
+  background-color: #267c86;
+}
+
+#send:focus, #reset:focus, #stem:focus, #se:focus {
+  border: 2px solid black;
+  text-decoration: underline;
+}
+
+/* MEDVIRKENDE */
+#medvirkende {
+  background-color: #f1f1f1;
+  min-height: 35em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.medvirkere {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 5em;
+}
+
+.medvirkere img {
+  width: 70%;
+}
+
+.medvirkere .navn {
+  font-weight: bold;
+}
+
+/* Fjerner padding og skalerer ned bildene på små skjermer, for at det skal se penere ut */
+@media screen and (max-width: 800px) {
+  .medvirkere {
+    padding-left: 0;
+  }
+
+  .medvirkere img {
+    width: 50%;
+  }
+}
+
+/*HJELPSIDE*/
+#hjelpediv {
+  background-color: #f1f1f1;
+  padding-bottom: 5em;
+}
+
+#hjelpHeader {
+  width: 100%;
+  text-align: center;
+  padding-top: 3.5em;
+  padding-bottom: 1em;
+}
+
+#hjelpediv .container .column-33 h4 {
+  font-weight: bold;
+}
+
+/* Knapp som åpner innholdet */
+.collapsible {
+  background-color: #78afc7;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid #d5edf7;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.collapsible:focus {
+  text-decoration: underline;
+}
+
+.collapsible:hover {
+  background-color: #f9fdff;
+}
+
+/* Innhold som åpnes ved trykk på knapp */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #a9d3e5;
+}
+
+.content p {
+  padding: 10px;
+}
+
+/* Tabell med snarveier */
+#htabell, .hrad {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+#htabell {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background-color: #252526;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 55px 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Venstre column */
+.footer .footer-left {
+  width: 40%;
+}
+
+/* logoteksten */
+.footer h3 {
+  color: #ffffff;
+  font-family: MyFont, Arial, sans-serif;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+/* En del av logoen har annen farge */
+.footer h3 span {
+  color: #387eb6;
+}
+
+/* Footer linker */
+.footer .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
+
+/* Vertikal linje mellom linker i footer */
+#borderLinker {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+#paddingLink1 {
+  padding-right: 0.5em;
+}
+
+#paddingLink2 {
+  padding-left: 0.5em;
+}
+
+/* På mobil vil det kun være vertikal linje mellom de to øverste linkene (den tredje blir på egen linje under) */
+@media screen and (max-width: 580px) {
+  #borderLinker {
+    border-right: 0;
+  }
+}
+
+.footer .footer-copyright {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer midten */
+.footer .footer-center {
+  width: 35%;
+}
+
+/* Ikoner på footeren (mail og adresse) */
+.footer .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #387eb6;
+  text-decoration: none;
+}
+
+/* Footer høyre */
+.footer .footer-right {
+  width: 20%;
+}
+
+.footer .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* "Om oss" på footeren */
+.footer .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Kolonnene blir plassert under hverandre ved små skjermer */
+@media (max-width: 880px) {
+  .footer {
+    font-size: 13px;
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
