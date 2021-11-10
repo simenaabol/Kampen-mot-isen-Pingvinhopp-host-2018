@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="hjelpmeny.js"></script>
+  <title>Kampen mot isen</title>
+  <link rel="icon" href="spill/grafikk/ikon.png">
+</head>
+
+<body id='hbody'>
+
+
+
+
+  <!-- Navigasjonsbar -->
+  <div id="navigasjonLiten">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <!-- Logo og logotext til venstre i navbaren -->
+        <div class="navbar-left logo">
+          <img src="grafikk_web/logo_blue.png" id="logo" alt='Logo av en blå pingvin'>
+        </div>
+        <a class="brand brand-name navbar-left" href="index.html" accesskey="1">
+          <div id="logoTextSpill" class="navbar-left">
+            KampenMotIsen
+          </div>
+        </a>
+
+        <!-- Meny-ikon som viser/skjuler navigasjonslinker når skjermen blir liten -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigasjonslinker til høyre i navbaren -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav-tabs" role="tablist" id="container">
+
+            <li class="nav-item">
+              <a class="nav-link" href="spill/index.html" accesskey="S">
+                SPILL
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#utviklere" accesskey="2">
+                UTVIKLERE
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#kontaktFirstDiv" accesskey="3">
+                KONTAKT OSS
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#medvirkende" accesskey="4">
+                MEDVIRKENDE
+              </a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link active" href="hjelp.html" accesskey="0">
+                HJELP & STØTTE
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+
+
+  <!-- Hjelp og støtte -->
+  <div class="container-fluid" id="hjelpediv">
+    <div class="container">
+
+      <!-- Header hjelp og støtte-->
+      <div id="hjelpHeader" class="underoverskrift">
+        <h2>Hjelp & støtte</h2>
+      </div>
+
+      <!-- Innhold hjelp og støtte -->
+      <div class="row">
+
+        <!-- Juridiskkolonne -->
+        <div class="column-33">
+
+          <div>
+            <h4>
+              <i class="fas fa-gavel" style="font-size:20px"></i>
+              Juridisk
+            </h4>
+
+            <!-- Knapp for lisensiering -->
+            <button class="collapsible" id='jur1'>Hvordan er koden lisensiert?</button>
+            <div class="content">
+              <p>Spillet 'Kampen mot Isen' er lisensiert under en lisens med
+                navnet GNU General Public License v3.0. <br>Det vil si at programkoden
+                til 'Kampen mot Isen' kan brukes kommersielt, distribueres,
+                modifiseres og patenteres fritt.<br> Vilkårene er at utvikler
+                må nevnes, en kopi av GNU GPL v3.0 må være med og koden må lisensieres
+                med samme lisens som opphavet. Vi har ikke noe ansvar for
+                hva som skjer med videre distribuert/modifisert kode og gir ingen
+                garanti for koden.
+              </p>
+              <object data="LICENCE.txt" type="txt">
+                <p>For mer informasjon, <a target="_blank" href="LICENSE"> les alle lisensvilkår.</a></p>
+              </object>
+            </div>
+
+            <!-- Knapp for kopibeskyttelse -->
+            <button class="collapsible" id='jur2'>Har dere brukt kopibeskyttet materiale? </button>
+            <div class="content">
+              <p>Det er ikke blitt benyttet av noe kopibeskyttet materiale.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ofte stilte spørsmål kolonne -->
+        <div class="column-33">
+
+          <div>
+
+            <h4><i class='fas fa-question-circle' style='font-size:20px'></i>Ofte stilte spørsmål</h4>
+
+            <!-- Knapp for hvordan spille -->
+            <button class="collapsible" id='faq1'>Hvordan spiller jeg Kampen mot Isen?</button>
+            <div class="content">
+              <p>Hopp på plattformene for å komme deg høyere opp i spillet. Merk deg de forskjellige plattformtypene.</p>
+            </div>
+
+            <!-- Knapp for styring -->
+            <button class="collapsible" id='faq2'>Hvordan styrer jeg pingvinen i spillet?</button>
+            <div class="content">
+              <p>Èn spiller: Bruk høyre og venstre piltast for å styre pingvinen.</p>
+              <p>To spillere: rød pingvin bruker A og D tastene, blå pingvin bruker høyre og venstre piltast.
+            </div>
+
+            <!-- Knapp for å vinne -->
+            <button class="collapsible" id='faq3'>Hvordan vinner jeg spillet?</button>
+            <div class="content">
+              <p>Det er ikke mulig å vinne. Man skal overleve så lenge som mulig.</p>
+            </div>
+
+            <!-- Knapp for rapporter problem -->
+            <button class="collapsible" id='faq4'>Jeg vil rapportere et problem, hva gjør jeg?</button>
+            <div class="content">
+              <p>Om du vil rapportere et problem, send en e-post til oss slik at vi kan fikse det! <a href="mailto:kontakt.team21@gmail.com?Subject=Rapportere%20feil" target="_top">Klikk her for å rapportere feil</a></p>
+            </div>
+
+            <!-- Knapp for løsninger -->
+            <button class="collapsible" id='faq5'>Jeg får ikke spillet til å fungere, hvorfor?</button>
+            <div class="content">
+              <ul>
+                <li>Er du sikker på at du bruker en støttet nettleser? Sjekk 'Systemkrav'.</li>
+                <li>Er tastaturet ditt koblet til?</li>
+                <li>Hvis spillet ikke får plass på skjermen, kan du trykke på F11.</li>
+                <li>Hvis du har ytterlige problemer, kan du sende en mail til <a href="mailto:kontakt.team21@gmail.com?Subject=Rapportere%20feil" target="_top">oss</a>.</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Tekniskkolonne -->
+        <div class="column-33">
+          <div>
+            <h4><i class='fas fa-laptop' style='font-size:20px'></i>Teknisk</h4>
+
+            <!-- Knapp for systemkrav -->
+            <button class="collapsible">Systemkrav</button>
+            <div class="content">
+              <p>Spillet er testet og fungerer i Firefox, Google Chrome, og Opera. I Safari fungerer spillet, men ikke musikken og lydeffektene. Det er kjent at spillet ikke fungerer i Edge, da Edge ikke støtter visse funksjoner.</p>
+            </div>
+
+            <!-- Knapp for snarveier -->
+            <button class="collapsible">Nyttige snarveier</button>
+            <div class="content">
+              <table id='htabell'>
+                <tr class='hrad'>
+                  <th>Snarvei</th>
+                  <th>Funksjon</th>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + S</td>
+                  <td>Spill</td>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + 1</td>
+                  <td>Forsiden</td>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + 2</td>
+                  <td>Utviklere</td>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + 3</td>
+                  <td>Kontakt oss</td>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + 4</td>
+                  <td>Medvirkende</td>
+                </tr>
+                <tr class='hrad'>
+                  <td>Alt + 0</td>
+                  <td>Hjelp</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Innhold til venstre på footeren -->
+      <div class="footer-left">
+        <h3>TEAM<span>21</span></h3>
+        <p class="footer-links">
+          <a href="#hjelpediv" id="paddingLink1">
+            Toppen av siden</a>
+          <a href="#hjelpediv" id="borderLinker">
+            Hjelp & Støtte</a>
+          <a href="index.html#kontaktFirstDiv" id="paddingLink2">
+            Kontakt oss</a>
+        </p>
+
+        <p class="footer-copyright">
+          Copyright &copy; 2018</p>
+      </div>
+
+      <!-- Innhold på midten av footeren -->
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Sverres gate 13</span>NTNU Trondheim</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:kontakt.team21@gmail.com">
+              kontakt.team21@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Innhold til høyre på footeren -->
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Om oss</span>
+          Vi i Team21 er fem studenter som går Informatikk, drift av datasystemer på NTNU Trondheim. Dette er vårt første prosjekt.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="hjelpmeny.js"></script>
+</body>
+
+</html>
